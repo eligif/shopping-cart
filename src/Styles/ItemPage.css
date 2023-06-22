@@ -1,0 +1,14 @@
+.item_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: beige;
+}
+
+#item_image {
+  border: 1px solid black;
+  border-radius: 10%;
+}
