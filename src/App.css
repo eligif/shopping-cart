@@ -58,7 +58,14 @@ body {
   left: 5px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
+}
+
+.about_container {
+  color: #fff;
+  background-color: #0000;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .item_card {
@@ -70,7 +77,6 @@ body {
   margin: 20px;
   text-decoration: none;
   flex-wrap: wrap;
-  min-width: 25%;
   letter-spacing: 0.8px;
   background-color: #fff;
   box-shadow: 3px 3px rgb(103, 116, 103, 0.2);
@@ -133,20 +139,8 @@ li {
 
 main {
   position: absolute;
-  float: left;
-  width: 70%;
 }
 
-aside {
-  position: absolute;
-  top: 8vh;
-  right: 1vw;
-  min-height: 50vh;
-  width: 30%;
-  background-color: rgb(180, 223, 180);
-  border-radius: 10%;
-  z-index: 0;
-}
 .mycart {
   display: flex;
   position: relative;

@@ -43,7 +43,7 @@ function App() {
           </ul>
         </nav>
       </header>
-
+      <main></main>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/LogIn" element={<LogIn></LogIn>}></Route>

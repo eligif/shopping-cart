@@ -158,6 +158,21 @@ export default function () {
   return (
     <>
       <main>
+        <div className="about_container">
+          <p>
+            eveniet tempora necessitatibus? Consequatur amet hic id distinctio
+            delectus ipsa tempore facere dignissimos fugit recusandae
+            consequuntur ut placeat, quasi nostrum ipsum earum mollitia expedita
+            vero. Suscipit consectetur amet officiis vel recusandae odit eos
+            soluta facere iusto, voluptas in laborum illum. In quas unde cum
+            labore iste, nihil expedita, temporibus animi laborum ab accusantium
+            tempore vero libero aliquam quasi consequuntur sunt ducimus rerum
+            debitis officia assumenda suscipit at dolorum. Minus expedita
+            tenetur praesentium esse eum, consequatur, nulla animi molestias nam
+            atque explicabo. Libero facere sit, doloribus sequi exercitationem
+            unde voluptatum consequatur velit, laboriosam eaque non aliquam!
+          </p>
+        </div>
         <div>
           <ItemList
             shoppingFunc={ShoppingList}
@@ -166,11 +181,10 @@ export default function () {
           ></ItemList>
         </div>
       </main>
-      <aside>
+      {/*<aside>
         <Cart shoppingList={myShoppingList} totalAmount={shoppingCartAmount} />
-      </aside>
+  </aside>*/}
       <footer></footer>
-      <element></element>
     </>
   );
 }
