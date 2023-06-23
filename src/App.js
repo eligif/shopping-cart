@@ -1,18 +1,19 @@
 import "./App.css";
 import "./Styles/ItemPage.css";
+import "./Styles/LogIn.css";
+
 import { useState, createContext } from "react";
 import ItemList from "./components/ItemList";
 import { v4 as uuidv4 } from "uuid";
 import Cart from "./components/Cart";
-import logo from "./images/200x200.svg";
 import { Link, Route, Routes } from "react-router-dom";
-import Product from "./components/Product";
-import Test from "./components/Test";
 import Home from "./components/Home";
 import ItemPage from "./components/ItemPage";
 import NoPage from "./components/NoPage";
 import NewItem from "./components/NewItem";
 import HomeLayout from "./components/HomeLayout";
+import LogIn from "./components/Login";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
 function App() {
   return (
@@ -20,28 +21,32 @@ function App() {
       <header>
         <nav>
           <ul>
+            <li id="li_login">
+              <Link to="/LogIn/" element={<LogIn></LogIn>}>
+                LogIn
+              </Link>
+            </li>
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Items</li>
-            <li>Categories</li>
-            <li>About</li>
-            <li>Partnership</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Contect Us</li>
+            <li>
+              <i href="/Icon/icons8-shopping-cart-96.png"></i>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i class="fas fa-band-aid"></i>
+            </li>
           </ul>
         </nav>
       </header>
 
-      {/*   <main>
-        <div>
-          <ItemList shoppingFunc={ShoppingList} items={itemList}></ItemList>
-          <button onClick={function somem() {}}>Click me!</button>
-        </div>
-      </main>
-      <aside>
-        <Cart shoppingList={myShoppingList} totalAmount={shoppingCartAmount} />
-  </aside>*/}
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/LogIn" element={<LogIn></LogIn>}></Route>
         <Route path="/ItemPage/" element={<ItemPage></ItemPage>}>
           <Route path=":id"></Route>
           <Route path=":name"></Route>

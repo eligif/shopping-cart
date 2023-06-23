@@ -48,7 +48,11 @@ body {
     transform: rotate(360deg);
   }
 }
+#li_login {
+  position: absolute;
 
+  left: 0px;
+}
 .Item_list {
   display: flex;
   left: 5px;
@@ -72,6 +76,7 @@ body {
   box-shadow: 3px 3px rgb(103, 116, 103, 0.2);
   border-radius: 10%;
   padding: 0px 0px 5px 0px;
+  border: 0.5px solid black;
 }
 
 .item_card:hover {
@@ -106,7 +111,7 @@ header {
   background-color: rgb(180, 223, 180);
   height: 5vh;
   width: 100%;
-
+  font-size: 22px;
   z-index: 1;
 }
 ul {
@@ -172,7 +177,6 @@ aside {
 }
 
 #btn_checkout {
-  top: 10vh;
 }
 
 div > ul {

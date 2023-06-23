@@ -4,13 +4,12 @@ import Cart from "./Cart";
 import { v4 as uuidv4 } from "uuid";
 import { useState, createContext } from "react";
 
+import { Beverage } from "../App";
 import logo from "../200x200.svg";
 
 export default function () {
   const [shoppingCartAmount, setShoppingCartAmount] = useState(0);
   const [myShoppingList, setShoppingList] = useState([]);
-
-  const UserContext = createContext();
 
   const itemList = [
     {
@@ -18,7 +17,8 @@ export default function () {
       productName: "pencil",
       price: 1.99,
       brand: "levi",
-      description: "Great pencil for writing stuff",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veniam minima provident! Voluptas, doloremque et?",
       image:
         "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
     },
@@ -28,7 +28,8 @@ export default function () {
       productName: "Paper",
       price: 1.99,
       brand: "levi",
-      description: "Great paper for writing stuff",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veniam minima provident! Voluptas, doloremque et?",
       image:
         "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
     },
@@ -37,7 +38,8 @@ export default function () {
       productName: "ipad",
       price: 130.99,
       brand: "levi",
-      description: "Great paper for writing stuff",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti in similique adipisci tenetur quasi reprehenderit optio amet itaque molestiae?",
       image:
         "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
     },
@@ -64,7 +66,71 @@ export default function () {
       productName: "sunglasses",
       price: 35.99,
       brand: "levi",
-      description: "Great paper for writing stuff",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti in similique adipisci tenetur quasi reprehenderit optio amet itaque molestiae?",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 7,
+      productName: "Tshirt",
+      price: 15.99,
+      brand: "optimize",
+      description: "Great tshirt for clothing ",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 8,
+      productName: "pants",
+      price: 55,
+      brand: "optimize",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci temporibus deserunt! Officia eligendi, dolore amet tempore, nisi quidem tenetur veritatis error fugit, itaque praesentium dicta laboriosam soluta nulla deserunt sint optio iusto minus excepturi?",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 9,
+      productName: "sunglasses",
+      price: 35.99,
+      brand: "levi",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci temporibus deserunt! Officia eligendi, dolore amet tempore, nisi quidem tenetur veritatis error fugit, itaque praesentium dicta laboriosam soluta nulla deserunt sint optio iusto minus excepturi?",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 10,
+      productName: "table",
+      price: 135,
+      brand: "zara home",
+      description: "wood table for writing stuff",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 11,
+      productName: "hat",
+      price: 16,
+      brand: "diesel",
+      description: "Great hat for sun heat",
+      image:
+        "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
+    },
+
+    {
+      id: 12,
+      productName: "envelops",
+      price: 8,
+      brand: "paper inc",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci temporibus deserunt! Officia eligendi, dolore amet tempore, nisi quidem tenetur veritatis error fugit, itaque praesentium dicta laboriosam soluta nulla deserunt sint optio iusto minus excepturi?",
       image:
         "https://a0.muscache.com/im/pictures/2e6c4002-54b3-460b-a0b7-875259439a81.jpg",
     },
@@ -78,7 +144,7 @@ export default function () {
   }
 
   function showPageImage(item) {
-    console.log("showPageImage")
+    console.log("showPageImage");
     return <h1>{item.productName}</h1>;
   }
 
@@ -103,6 +169,8 @@ export default function () {
       <aside>
         <Cart shoppingList={myShoppingList} totalAmount={shoppingCartAmount} />
       </aside>
+      <footer></footer>
+      <element></element>
     </>
   );
 }

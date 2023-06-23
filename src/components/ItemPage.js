@@ -11,32 +11,24 @@ export default function ItemPage(item) {
   // const { state } = this.props.location;
   const { id } = useParams();
   console.log(item.productName);
+
   return (
     <>
       <div className="item_container">
-        <div>
-          {/*{data.map((item) => {
-            if (item.id == id) {
-              return (
-                <>
-                  <h1>{item.productName}</h1>
-                  <img
-                    id="item_image"
-                    src={item.image}
-                    style={{ width: "600px" }}
-                    alt="not working"
-                  ></img>
-                  <br />
-                  <span>Price: {item.price}</span>
-                  <p>Description: {item.description}</p>
-                </>
-              );
-            } else <h1>Item Not Found</h1>;
-          })}*/}
-
-          <span>your id is : {id}</span>
-          <span>your item name is : {data.productName}</span>
+        <div className="img_container"></div>
+        <img src="https://image-placeholder.com/images/actual-size/468x336.png"></img>
+        <div className="smallImage_container">
+          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
+          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
+          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
         </div>
+        <aside>
+          <div className="details_container">
+            <h3 id="productName">{data.productName}</h3>
+            <p id="productPrice">{data.price}</p>
+            <p id="productDescription">{data.description}</p>
+          </div>
+        </aside>
       </div>
     </>
   );

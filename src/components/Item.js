@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { useEffect, useContext } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { DataContext } from "./DataContext";
-import ItemPage from "./ItemPage";
 
 export default function Item({ item, shoppingFunc, itemPageFunc }) {
   const [ProdactName, setProdactName] = useState(null);
-  const data = useContext(DataContext);
-  let show = false;
+
   useEffect((name2) => {
     let firstChar = item.productName.charAt(0).toUpperCase();
     let myarray = item.productName.split(item.productName.charAt(0));
