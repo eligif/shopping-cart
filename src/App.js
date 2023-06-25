@@ -22,23 +22,22 @@ function App() {
         <nav>
           <ul>
             <li id="li_login">
-              <Link to="/LogIn/" element={<LogIn></LogIn>}>
+              <Link id="li_login_link" to="/LogIn/" element={<LogIn></LogIn>}>
                 LogIn
               </Link>
             </li>
             <li>
-              <Link to="/">Home</Link>
+              <Link id="li_Home_link" to="/">
+                <img
+                  id="logo_image_center"
+                  src="https://imgtr.ee/images/2023/06/25/dr4n1.png"
+                ></img>
+              </Link>
             </li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Contect Us</li>
-            <li>
-              <i href="/Icon/icons8-shopping-cart-96.png"></i>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <i class="fas fa-band-aid"></i>
+            <li id="cart_icon">
+              <Link to="/ShoppingCart" element={<Cart></Cart>}>
+                <img src="https://imgtr.ee/images/2023/06/25/drvYR.png"></img>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -47,6 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/LogIn" element={<LogIn></LogIn>}></Route>
+        <Route path="/ShoppingCart" element={<Cart></Cart>}></Route>
         <Route path="/ItemPage/" element={<ItemPage></ItemPage>}>
           <Route path=":id"></Route>
           <Route path=":name"></Route>

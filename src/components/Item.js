@@ -21,7 +21,7 @@ export default function Item({ item, shoppingFunc, itemPageFunc }) {
         >
           <img src={item.image} id="card_image" alt="not"></img>
           <div>{ProdactName}</div>
-          <div>{item.price}&#36;</div>
+          <div>{item.price}&#x24;</div>
           <div>By: {item.brand}</div>
         </Link>
         <button
@@ -31,7 +31,7 @@ export default function Item({ item, shoppingFunc, itemPageFunc }) {
           type="button"
           id="add_btn"
         >
-          Add
+          Buy now
         </button>
       </div>
     </>

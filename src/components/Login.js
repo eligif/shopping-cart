@@ -19,10 +19,8 @@ export default function Login() {
           <div className="sign_help">
             <ul>
               <li id="signup">Sign up</li>
-              <span
-                style={{ fontSize: "25px", top: "10px", position: "relative" }}
-              >
-                |
+              <span style={{ fontSize: "25px", position: "relative" }}>
+                &#8739;
               </span>
               <li id="forgot">Forgot your Password</li>
             </ul>

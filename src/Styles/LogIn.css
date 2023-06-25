@@ -63,10 +63,17 @@ ul li {
   padding: 10px;
 }
 
+#signup,
+#forgot {
+  color: #000000;
+}
+
 #signup:hover {
   border: 1px solid black;
+  cursor: pointer;
 }
 
 #forgot:hover {
   border: 1px solid black;
+  cursor: pointer;
 }

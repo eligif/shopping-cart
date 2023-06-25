@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/ItemPage.css";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
@@ -7,28 +7,64 @@ import { useLocation } from "react-router-dom";
 export default function ItemPage(item) {
   const location = useLocation();
   const data = location.state?.data;
-  // console.log(data.productName + "itemPage");
-  // const { state } = this.props.location;
   const { id } = useParams();
+  const [count, setCount] = useState(1);
   console.log(item.productName);
 
   return (
     <>
       <div className="item_container">
-        <div className="img_container"></div>
-        <img src="https://image-placeholder.com/images/actual-size/468x336.png"></img>
-        <div className="smallImage_container">
-          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
-          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
-          <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
-        </div>
-        <aside>
-          <div className="details_container">
-            <h3 id="productName">{data.productName}</h3>
-            <p id="productPrice">{data.price}</p>
-            <p id="productDescription">{data.description}</p>
+        <div className="img_container">
+          <div className="mainImage_container">
+            <img src="https://image-placeholder.com/images/actual-size/468x336.png"></img>
           </div>
-        </aside>
+
+          <div className="smallImage_container">
+            <ul className="ul_small_image">
+              <li>
+                <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
+              </li>
+              <li>
+                <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
+              </li>
+              <li>
+                <img src="https://image-placeholder.com/images/actual-size/100x75.png"></img>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="details_container">
+          <h1 id="productName">{data.productName}</h1>
+          <p id="productPrice">{data.price}</p>
+          <p id="productDescription">{data.description}</p>
+          <div className="quntitiAndAdd">
+            <div className="quntityHolder">
+              <button
+                onClick={() => setCount(count > 0 ? count - 1 : count == 0)}
+                id="btn_minus"
+                type="button"
+              >
+                -
+              </button>
+
+              <span min={0} id="inputquntity">
+                {count}
+              </span>
+              <button
+                onClick={() => setCount(count + 1)}
+                id="btn_plus"
+                type="button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <button id="btn_AddToCart" onClick={null} type="button">
+            Add to cart <span style={{ fontSize: "15px" }}>&#8739; </span>{" "}
+            {data.price}&nbsp;x&nbsp;{count} = {data.price * count}
+          </button>
+        </div>
       </div>
     </>
   );
