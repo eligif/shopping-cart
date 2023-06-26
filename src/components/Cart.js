@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import CartItems from "./CartItems";
+import "../Styles/Cart.css";
 
 export default function Cart({ shoppingList, totalAmount }) {
   console.log(shoppingList);

@@ -181,9 +181,9 @@ export default function () {
           ></ItemList>
         </div>
       </main>
-      {/*<aside>
+      <aside>
         <Cart shoppingList={myShoppingList} totalAmount={shoppingCartAmount} />
-      </aside>*/}
+      </aside>
       <footer></footer>
     </>
   );
