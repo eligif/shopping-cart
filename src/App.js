@@ -35,7 +35,7 @@ function App() {
               </Link>
             </li>
             <li id="cart_icon">
-              <Link to="/ShoppingCart" element={<Cart></Cart>}>
+              <Link to="/ShoppingCart" element={<Cart shoppingList={0}></Cart>}>
                 <img src="https://imgtr.ee/images/2023/06/25/drvYR.png"></img>
               </Link>
             </li>

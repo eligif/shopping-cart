@@ -15,7 +15,12 @@ export default function Item({ item, shoppingFunc, itemPageFunc }) {
     <>
       <div className="item_card">
         <Link
-          to={`/ItemPage/${item.id}`}
+          to={{
+            pathname: `/ItemPage/${item.id}`,
+            search: "?sort=name",
+            hash: "#the-hash",
+            state: { shoppingFunc: "llll" },
+          }}
           state={{ data: item }}
           className="link"
         >

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "../Styles/ItemPage.css";
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
+import Cart from "./Cart";
 
-export default function ItemPage(item) {
+export default function ItemPage({ item }) {
   const location = useLocation();
   const data = location.state?.data;
   const { id } = useParams();
   const [count, setCount] = useState(1);
-  console.log(item.productName);
+  console.log(data + " s");
 
   return (
     <>
@@ -60,12 +61,14 @@ export default function ItemPage(item) {
               </button>
             </div>
           </div>
-          <button id="btn_AddToCart" onClick={null} type="button">
+          <button id="btn_AddToCart" type="button">
             Add to cart <span style={{ fontSize: "15px" }}>&#8739; </span>{" "}
-            {data.price}&nbsp;x&nbsp;{count} = {data.price * count}
+            {data.price}&nbsp;x&nbsp;{count} ={" "}
+            {(data.price * count).toPrecision(4)}
           </button>
         </div>
       </div>
+      <Cart style={{ backgroundColor: "red" }}></Cart>
     </>
   );
 }

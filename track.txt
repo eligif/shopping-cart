@@ -1,0 +1,104 @@
+int Divide(int numerator, int denominator, int* quotient, int* remainder)
+{
+    if ( /* ??? */ )
+    {
+        return -1;
+    }
+
+    /* ### Write your code below this line ### */
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+void FindMinMax(const int array[], int size, int* min, int* max)
+{
+    
+    int max1 = 0;    
+    
+    
+    /* ### Write your code below this line ### */
+     var array = [11, 32, 8, 41, 16, 1];
+ 
+  /* ### Write your code below this line ### */
+  for (int i = 0; i <= size; i++) {
+    if (max1 < array[i]) {
+      max1 = array[i];
+    }
+  }
+
+  int temp = max1;
+  for (int j = 0; j <= size; j++) {
+    for (int h = j + 1; h <= size; h++) {
+      if (array[j] < array[h]) {
+        temp = array[j];
+      }
+    }
+  }
+  if (temp > array[size]) {
+    temp = array[size];
+  }
+    
+  min =  &temp;
+  max =  &max1
+}
+
+`/ItemPage/${item.id}`
+
+
+        <Link  to={{
+    pathname: `/ItemPage/${item.id}`,
+    state: item }} >
+
+
+git remote add destination https://github.com/eligif/shopping-cart.git
+git push -u destination main
+git config --global user.email "elisudai1@gmail.com"
+git commit -m "First release of shopping cart!"
+
+git remote rename origin destination
+
+
+
+ {/*{data.map((item) => {
+            if (item.id == id) {
+              return (
+                <>
+                  <h1>{item.productName}</h1>
+                  <img
+                    id="item_image"
+                    src={item.image}
+                    style={{ width: "600px" }}
+                    alt="not working"
+                  ></img>
+                  <br />
+                  <span>Price: {item.price}</span>
+                  <p>Description: {item.description}</p>
+                </>
+              );
+            } else <h1>Item Not Found</h1>;
+          })}*/}
+
+
+
+       <h3 id="productName">{data.productName}</h3>
+          <p id="productPrice">{data.price}</p>
+          <p id="productDescription">{data.description}</p>
+          <div className="quntitiAndAdd">
+            <button type="button">+</button>
+            <span>1</span>
+            <button type="button">-</button>
+            <button type="button">Add to cart</button>
+          </div>
+
+id="inputquntity" 
+
+&#8208; {count * data.price}&nbsp;({count})

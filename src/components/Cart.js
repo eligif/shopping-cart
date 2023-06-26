@@ -2,30 +2,19 @@ import React, { useEffect } from "react";
 import CartItems from "./CartItems";
 
 export default function Cart({ shoppingList, totalAmount }) {
-  useEffect(() => {}, [totalAmount]);
-  let number = 0;
+  console.log(shoppingList);
 
-  if (totalAmount == 0) {
-    number = totalAmount.toPrecision(1);
-  } else {
-    number = totalAmount.toPrecision(4);
-  }
+  let number;
 
-  const boldText = {
-    fontWeight: "bold",
-  };
-  const nobold = {
-    fontWeight: "normal",
-  };
   return (
     <div>
       <div className="myCart">
         <h1>My Cart</h1>
-        <CartItems shoppingList={shoppingList} totalAmount={totalAmount} />
+        <CartItems shoppingList={0} totalAmount={0} />
         <br></br>
-        <div id="totalAmount" style={boldText}>
+        <div id="totalAmount">
           <br />
-          Total amount:<span style={nobold}> {number}&#36;</span>
+          Total amount:<span> {number}&#36;</span>
         </div>
 
         <button id="btn_checkout" type="button">

@@ -183,7 +183,7 @@ export default function () {
       </main>
       {/*<aside>
         <Cart shoppingList={myShoppingList} totalAmount={shoppingCartAmount} />
-  </aside>*/}
+      </aside>*/}
       <footer></footer>
     </>
   );
