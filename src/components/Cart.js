@@ -10,8 +10,13 @@ export default function Cart({ shoppingList, totalAmount }) {
   return (
     <div>
       <div className="myCart">
+        <nav>
+          <ul>
+            <li id="i_close" style={{fontSize:"20px",color:"black"}}>x</li>
+          </ul>
+        </nav>
         <h1>My Cart</h1>
-        <CartItems shoppingList={0} totalAmount={0} />
+        <CartItems shoppingList={shoppingList} totalAmount={totalAmount} />
         <br></br>
         <div id="totalAmount">
           <br />

@@ -19,7 +19,7 @@ export default function Item({ item, shoppingFunc, itemPageFunc }) {
             pathname: `/ItemPage/${item.id}`,
             search: "?sort=name",
             hash: "#the-hash",
-            state: { shoppingFunc: "llll" },
+            state: { shoppingFunc:shoppingFunc},
           }}
           state={{ data: item }}
           className="link"

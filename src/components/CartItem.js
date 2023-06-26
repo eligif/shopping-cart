@@ -9,6 +9,7 @@ export default function CartItem({ item }) {
   return (
     <div>
       <div>
+        <h3>{item.productName}</h3>
         {name2} <span>{item.price} &#36;</span>
       </div>
     </div>

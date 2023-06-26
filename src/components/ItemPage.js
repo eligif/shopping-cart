@@ -8,9 +8,10 @@ import Cart from "./Cart";
 export default function ItemPage({ item }) {
   const location = useLocation();
   const data = location.state?.data;
+  const shoppingList = location.state?.shoppingList;
   const { id } = useParams();
   const [count, setCount] = useState(1);
-  console.log(data + " s");
+  console.log(shoppingList + " s");
 
   return (
     <>
@@ -68,7 +69,7 @@ export default function ItemPage({ item }) {
           </button>
         </div>
       </div>
-      <Cart style={{ backgroundColor: "red" }}></Cart>
+      <Cart shoppingList={shoppingList}></Cart>
     </>
   );
 }

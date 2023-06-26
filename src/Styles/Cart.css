@@ -1,6 +1,14 @@
+
+
 .myCart {
   position: relative;
+  float: right ;
   width: 500px;
-  height: 100vw;
+  height: 100vh;
   background-color: darkgrey;
+}
+
+
+#i_close{
+  float: left;
 }
