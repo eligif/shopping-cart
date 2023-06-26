@@ -1,0 +1,80 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #000000;
+  }
+  .signInContainer {
+    position: relative;
+    top: 300px;
+  }
+}
+
+body {
+  background-color: #fff;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.signInContainer {
+  position: relative;
+  top: 100px;
+}
+
+.signForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  padding: 5px;
+  margin: 10px;
+  width: 350px;
+}
+
+#btn_signin {
+  min-width: 120px;
+  border: 1px soli black;
+  border-radius: 5%;
+  background-color: rgb(185, 185, 230);
+  padding: 5px;
+  margin-top: 5%;
+  left: 10px;
+}
+
+#email {
+  position: relative;
+  right: 2px;
+}
+
+.sign_help {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  left: 35px;
+}
+
+ul li {
+  display: inline;
+
+  font-size: 1rem;
+}
+
+#signup,
+#forgot {
+  color: #000000;
+  padding: 10px;
+  margin: 2px;
+}
+
+#signup:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#forgot:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}

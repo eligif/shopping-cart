@@ -1,0 +1,12 @@
+.container {
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container > div {
+  color: red;
+  font-size: 48px;
+}
